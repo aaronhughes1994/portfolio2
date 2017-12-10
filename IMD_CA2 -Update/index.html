@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" href="style.css">
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Portfolio - Aaron Hughes</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-default" role="navigation">
+         <div class="container">
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+               <ul class="nav navbar-nav">
+                  <br>
+                  <li>
+                     <a class="active" href="index.html">HOME</a>
+                  </li>
+                  <br>
+                  <li>
+                     <a href="about.html">ABOUT</a>
+                  </li>
+                  <br>
+                  <li>
+                     <a href="education.html">EDUCATION</a>
+                  </li>
+                  <br>
+                  <li>
+                     <a href="projects.html">PROJECTS</a>
+                  </li>
+                  <br>
+                  <li>
+                     <a href="workexperience.html">EXPERIENCE</a>
+                  </li>
+                  <br>
+                  <li>
+                     <a href="information.html">INFORMATION</a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </nav>
+      <div class="content">
+         <form class="searchform" method="get" action="https://www.google.ie/search" target="blank">
+            <input type="text" placeholder="search" name="q" size="15" value="">
+            <button>search</button>
+         </form>
+         <br></br>
+         <br></br>
+         <center><img src="Me.jpg" alt="photo" style="width:250px"></center>
+         <center>
+            <h2>AARON HUGHES</h2>
+         </center>
+         <center>
+            <h2>STUDENT</h2>
+         </center>
+         <h4>Hello and welcome to my on-line portfolio where you can discover more
+            about me including my hobbies and interests, my educational background with my grades and 
+            GPA while attending IT Tallaght, as well as my college projects which I have done and my 
+            work experience I have gained during my third year internship.
+         </h4>
+         <h4>If you would like to take a look at my current CV, please feel free to download my CV 
+            through the link below.
+         </h4>
+         <a href="Curriculum Vitae.docx" download>
+         <button type="button" class="btn btn indigo btn-lg" style="float:left;"> Download CV</button>
+         <br>
+         </a>
+         <h4> or if you would like to find out more information on me you can find how to get in touch 
+            with me through the contact info below
+         </h4>
+         <button id="myBtn">Contact Info</button>
+         <div id="myModal" class="modal">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2 class="modal-title">You can contact me via the following:</h2>
+               </div>
+               <div class="modal-body">
+                  <h4>I am available to contact after 5pm Monday - Friday</h4>
+                  <p>Email: aaronohaodh@gmail.com</p>
+                  <br></br>
+                  <p>Phone Number: 0852058743</p>
+               </div>
+            </div>
+         </div>
+         <script>
+            var modal = document.getElementById('myModal');
+            
+            var btn = document.getElementById("myBtn");
+            
+            var span = document.getElementsByClassName("close")[0];
+            
+            btn.onclick = function() {
+                modal.style.display = "block";
+            }
+            
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
+            
+            window.onclick = function(event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
+         </script>
+         <br><br><br><br><br><br><br>
+         <div id="social">
+            <a href="https://www.linkedin.com/in/aaron-hughes-a52a83b3/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+         </div>
+         <div id="map"></div>
+         <script>
+            function initMap() {
+            	var location = {lat: 53.291058, lng: -6.362994};
+            	var map = new google.maps.Map(documents.getElementByID(map), {
+            		zoom: 4,
+            		center: location
+            	});
+            	var marker= new google.maps.Marker({
+            		position: location,
+            		map: map
+            	});
+            }
+            
+         </script>
+         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBKEa04pBd9akgP0Z4xYXRU5igEIsL_zjo&callback=initMap"></script>
+      </div>
+   </body>
+</html>
